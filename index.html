@@ -125,19 +125,19 @@
                                 var tax = rand(5, 30);
                                 var deposited = 5000 * (1 - (tax / 100));
                                 accounts.tfsa += deposited;
-                                term.print("You got taxed " + tax + "% meaning you deposited $" + deposited + ".");
+                                term.print("You got taxed " + tax + "% meaning you deposited $" + parseInt(deposited) + ".");
                             } else if (userInput == "rrsp") {
                                 accounts.rrsp += 5000;
                                 term.print("You have deposited $5000 into your RRSP.");
                             } else if (userInput == "mutual fund") {
                                 var deposited = 5000 * 0.95;
                                 accounts.mutFund += deposited;
-                                term.print("You paid a 5% management fee meaning you deposited $" + deposited + ".");
+                                term.print("You paid a 5% management fee meaning you deposited $" + parseInt(deposited) + ".");
                             } else if (userInput == "hedge fund") {
                                 hedgeCounter++;
                                 var deposited = 5000 * 0.9;
                                 accounts.hedgeFund += deposited;
-                                term.print("You paid a 10% management fee meaning you deposited $" + deposited + ".");
+                                term.print("You paid a 10% management fee meaning you deposited $" + parseInt(deposited) + ".");
                             } else {
                                 term.print("Sorry, I didn't understand that. The money will not be deosited anywhere.");
                             }
