@@ -111,7 +111,7 @@
             dots(3);
             if (turns > 0) {
                 term.print("Turns left: " + turns);
-                var index = rand(0, questions.length);
+                var index = rand(0, questions.length-1);
                 var currentQuestion = questions[index];
                 currentQuestion.Ask();
                 questions.splice(index, 1);
